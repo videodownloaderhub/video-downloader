@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Video Downloader - Free Tool</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #111, #000);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.box {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    font-size: 14px;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #ff0000;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.footer {
+    font-size: 12px;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+</style>
+</head>
+
+<body>
+<div class="box">
+    <h1>All Video Downloader</h1>
+
+    <select id="platform">
+        <option value="yt">YouTube Video</option>
+        <option value="ig">Instagram Reel / Video</option>
+        <option value="fb">Facebook Video</option>
+        <option value="tw">Twitter (X) Video</option>
+    </select>
+
+    <input type="text" id="link" placeholder="Video Link Paste करें">
+
+    <button onclick="download()">Download</button>
+
+    <div class="footer">
+        Free • Fast • No Login Required
+    </div>
+</div>
+
+<script>
+function download() {
+    let url = document.getElementById("link").value;
+    let platform = document.getElementById("platform").value;
+
+    if(url === "") {
+        alert("कृपया video link डालें");
+        return;
+    }
+
+    if(platform === "yt") {
+        window.open("https://yt1s.com/en?q=" + url, "_blank");
+    }
+    else if(platform === "ig") {
+        window.open("https://snapinsta.app/?url=" + url, "_blank");
+    }
+    else if(platform === "fb") {
+        window.open("https://fdown.net/?url=" + url, "_blank");
+    }
+    else if(platform === "tw") {
+        window.open("https://ssstwitter.com/?url=" + url, "_blank");
+    }
+}
+</script>
+
+</body>
+</html>
